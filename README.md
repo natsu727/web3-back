@@ -1,24 +1,14 @@
-# README
+## 環境構築手順
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. このリポジトリをPullする
 
-Things you may want to cover:
+2.  ``` sudo groupadd docker ``` を実行し　Dockerグループが存在するか確認する
 
-* Ruby version
+3. (Dockerグループが存在していた場合) ```sudo usermod -aG docker $USER ``` で自身をグループに追加する
 
-* System dependencies
+4. (Dockerグループが存在しない場合)　```sudo groupadd docker --gid ``` を実行しグループを作成その後 3. を行う
 
-* Configuration
+5. ```docker compose exec web rake db:create ``` でローカルにDBを作成する
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6. ``` docker compose up -d --build ```
+   
