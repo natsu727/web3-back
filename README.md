@@ -1,6 +1,6 @@
 ## 環境構築手順
 
-1. このリポジトリをPullする
+1. このリポジトリをCloneする
 
 2.  ``` sudo groupadd docker ``` を実行し　Dockerグループが存在するか確認する
 
